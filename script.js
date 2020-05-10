@@ -20,7 +20,7 @@ function playGame() {
     let userInput = new Name(playerOne, playerTwo);
     cells.forEach((cell) => {
         cell.addEventListener("click", function (e) {
-            if (playerTurn && winner == false && leftPlayer.innerHTML != "Player One") {
+            if (playerTurn && winner == false && leftPlayer.innerHTML != "") {
                 if (cell.textContent == "X" || cell.textContent == "O") {
                     alert("Space Taken, Please choose again.")
                 } else {
@@ -30,7 +30,7 @@ function playGame() {
                     computerTurn = true;
                     counter++;
                 }
-            } else if (computerTurn && winner == false && rightPlayer.innerHTML != "Player Two") {
+            } else if (computerTurn && winner == false && rightPlayer.innerHTML != "") {
                 if (cell.textContent == "X" || cell.textContent == "O") {
                     alert("Space Taken, Please choose again.")
                 } else {
