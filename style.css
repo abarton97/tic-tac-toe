@@ -9,16 +9,6 @@ body {
     text-align: center;
 }
 
-.playerBoard {
-    border-radius: 10px;
-    text-align: center;
-    width: 100px;
-    height: 300px;
-    margin-left: 100px;
-    border-style: solid;
-    position: fixed;
-}
-
 .gameBoard {
     border-radius: 10px;
     height: 600px;
