@@ -1,37 +1,41 @@
 body {
     margin: 0;
-    background-color: #777567;
+    background-color: #191919;
 }
 
 .gameText {
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Lobster', cursive;
     text-align: center;
 }
 
 .gameBoard {
+    grid-template-columns: 150px;
+    grid-template-rows: 150px;
     border-radius: 10px;
+    border-style: none;
     height: 600px;
     width: 600px;
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    border-style: solid;
 }
 
 .cell {
     border-style: solid;
     border-width: 1.4px;
-    background-color: white;
+    background-color: #191919;
+    border-color: white;
     text-align: center;
-    height: 200px;
+    height: 175px;
+    width: 175px;
     line-height: 200px;
     font-size: 100px;
     font-family: monospace;
 }
 
 .cell:hover {
-    background-color: white;
+    background-color: #4c4c4c;
     opacity: .8;
 }
 
@@ -149,7 +153,7 @@ body {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #777567;
+    background-color: #191919;
     color: white;
     text-align: center;
     border-top-left-radius: 10px;
