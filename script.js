@@ -1,4 +1,3 @@
-boardCells(3);
 let playerTurn = true;
 let computerTurn = false;
 let winner = false;
@@ -26,6 +25,7 @@ function playGame() {
                     alert("Space Taken, Please choose again.")
                 } else {
                     cell.textContent = "X";
+                    cell.style.color = "white";
                     playerTurn = false
                     computerTurn = true;
                     counter++;
@@ -35,6 +35,7 @@ function playGame() {
                     alert("Space Taken, Please choose again.")
                 } else {
                     cell.textContent = "O";
+                    cell.style.color = "white";
                     playerTurn = true
                     computerTurn = false;
                     counter++;
@@ -96,7 +97,7 @@ function declareWinner() {
             alert(`${document.querySelector(".rightPlayer").innerHTML} Wins!`)
         }
     }
-    if (counter == 9) {
+    if (counter == 9 && winner == false) {
         computerTurn = false;
         alert("TIE")
     }
@@ -110,29 +111,6 @@ function resetGame() {
     for (i = 0; i < cells.length; i++) {
         cells[i].textContent = "";
     }
-}
-
-/*
-Create Game Board
-*/
-
-function boardCells(num) {
-    const gameBoard = document.querySelector(".gameBoard");
-    for (i = 0; i < (num * num); i++) {
-        const newCell = document.createElement("div");
-        newCell.setAttribute("class", "cell");
-        gameBoard.appendChild(newCell);
-    }
-    gameBoard.style["grid-template-columns"] = gridlayout(3);
-    gameBoard.style["grid-template-rows"] = gridlayout(3);
-}
-
-function gridlayout(num) {
-    let columnsandrows = "";
-    for (i = 0; i < num; i++) {
-        columnsandrows += "200px ";
-    }
-    return columnsandrows
 }
 
 /*
@@ -166,6 +144,7 @@ Color Changing Tic-Tac-Toe Text
 function changeColor() {
     const textElement = document.querySelector(".gameText");
     setInterval(() => {
+        textElement.style.color = getRandomColor();
         if (playerTurn && winner == false) {
             leftPlayer.style.color = getRandomColor();
             rightPlayer.style.color = "white";
