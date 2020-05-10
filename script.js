@@ -140,7 +140,6 @@ window.onclick = function (event) {
 Color Changing Tic-Tac-Toe Text
 */
 
-
 function changeColor() {
     const textElement = document.querySelector(".gameText");
     setInterval(() => {
