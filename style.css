@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    background-color: #777567;
+}
+
+.gameText {
+    font-size: 5em;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+.playerBoard {
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    height: 300px;
+    margin-left: 100px;
+    border-style: solid;
+    position: fixed;
+}
+
+.gameBoard {
+    border-radius: 10px;
+    height: 600px;
+    width: 600px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+}
+
+.cell {
+    border-style: solid;
+    border-width: 1.4px;
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    font-size: 100px;
+    font-family: monospace;
+}
+
+.cell:hover {
+    background-color: white;
+    opacity: .8;
+}
+
+.leftPlayer {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    font-family: 'Lobster', cursive;
+    margin-left: 31.5%;
+}
+
+.rightPlayer {
+    color: white;
+    font-size: 2em;
+    font-family: 'Lobster', cursive;
+    margin-left: 59%;
+}
+
+.reset {
+    position: absolute;
+    margin-left: 12.5%;
+    font-size: 30px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-family: monospace;
+    border: none;
+    background-color: white;
+}
+
+.reset:hover {
+    opacity: .7;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    font-family: monospace;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    margin-left: -20px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #777567;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
+}
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: white;
+}
+
+/* Input Fields */
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
