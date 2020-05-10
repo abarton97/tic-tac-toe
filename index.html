@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <div class="gameText">Tic-Tac-Toe</div>
+    <div class="leftPlayer">Player One</div>
+    <div class="rightPlayer">Player Two</div>
+    <button class="reset">Reset</button>
+    <div class="gameBoard">
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Player Information</h2>
+            </div>
+            <div class="modal-body">
+                <form action="/action_page.php" class="form-container" id="player-form" method="post">
+                    <label for="playerOne"><b>Player One</b></label>
+                    <input type="text" placeholder="Enter Name" name="playerOne" id="playerOne" required>
+
+                    <label for="playerTwo"><b>Player Two</b></label>
+                    <input type="text" placeholder="Enter Name" name="playerTwo" id="playerTwo" required>
+
+                    <div class="modal-footer">
+                        <button type="button" id="btnSave" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+
+</html>
