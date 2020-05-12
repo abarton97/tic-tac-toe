@@ -80,7 +80,7 @@ function declareWinner() {
 
         3: [cells[0].textContent, cells[3].textContent, cells[6].textContent],
         4: [cells[1].textContent, cells[4].textContent, cells[7].textContent],
-        5: [cells[2].textContent, cells[5].textContent, cells[6].textContent],
+        5: [cells[2].textContent, cells[5].textContent, cells[8].textContent],
 
         6: [cells[0].textContent, cells[4].textContent, cells[8].textContent],
         7: [cells[2].textContent, cells[4].textContent, cells[6].textContent],
