@@ -74,7 +74,7 @@ function checkO(value) {
 function declareWinner() {
     console.log(cells[0].innerHTML)
     var combos = {
-        0: [[0], [1], [2]],
+        0: [cells[0].textContent, cells[1].textContent, cells[2].textContent],
         1: [cells[3].textContent, cells[4].textContent, cells[5].textContent],
         2: [cells[6].textContent, cells[7].textContent, cells[8].textContent],
 
